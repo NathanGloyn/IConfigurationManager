@@ -1,23 +1,25 @@
-﻿using NUnit.Framework;
-using Configuration.Core;
+﻿using Configuration.Core;
+using Configuration.Interface;
+using NUnit.Framework;
 
 namespace ConfigurationManagerWrapper.Test
 {
-    [TestFixture]
-    public class When_using_ConfigurationManagerAdapter_to_read_app_settings
+    [TestFixture(typeof(ConfigurationManagerAdapter))]
+    [TestFixture(typeof(WebConfigurationManagerAdapter))]
+    public class When_using_IConfigurationManager_to_read_app_settings<T> where T: IConfigurationManager, new()
     {
-        private ConfigurationManagerAdapter _target;
+        private IConfigurationManager _target;
 
         [SetUp]
         public void TestSetUp()
         {
-            _target = new ConfigurationManagerAdapter();
+            this._target = new T();
         }
 
         [Test]
         public void Should_return_empty_app_settings_when_no_section_in_config()
         {
-            ConfigurationFileLoader.LoadConfigurationFile(TestConfig.Empty);
+            ConfigurationFileLoader.LoadConfigurationFile(TestConfig.Empty);   
 
             Assert.That(_target.AppSettings, Is.Empty);
         }

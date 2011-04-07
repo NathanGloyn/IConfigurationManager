@@ -1,17 +1,19 @@
-﻿using NUnit.Framework;
+﻿using Configuration.Interface;
+using NUnit.Framework;
 using Configuration.Core;
 
 namespace ConfigurationManagerWrapper.Test
 {
-    [TestFixture]
-    public class When_using_ConfigurationManagerAdapter_to_read_connectionstrings
+    [TestFixture(typeof(ConfigurationManagerAdapter))]
+    [TestFixture(typeof(WebConfigurationManagerAdapter))]
+    public class When_using_IConfigurationManager_to_read_connectionstrings<T> where T : IConfigurationManager, new()
     {
-        private ConfigurationManagerAdapter _target;
+        private IConfigurationManager _target;
 
         [SetUp]
         public void TestSetUp()
         {
-            _target = new ConfigurationManagerAdapter();
+            _target = new T();
         }
 
         [Test]

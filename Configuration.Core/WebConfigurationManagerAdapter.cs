@@ -1,12 +1,13 @@
 ﻿using System.Collections.Specialized;
 using System.Configuration;
+using Configuration.Interface;
 
 namespace Configuration.Core
 {
     /// <summary>
     /// Class that wraps the functionality within the Web Configuration Manager class
     /// </summary>
-    public class WebConfigurationManagerAdapter
+    public class WebConfigurationManagerAdapter: IConfigurationManager
     {
         /// <summary>
         /// Provides access to the AppSettings in the configuration file
