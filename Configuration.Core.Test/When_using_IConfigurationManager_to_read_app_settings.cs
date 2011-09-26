@@ -113,5 +113,13 @@ namespace ConfigurationManagerWrapper.Test
 
             Assert.AreEqual("Another value", _target.AppSettings["Another Key"]);
         }
+
+        [Test]
+        public void Should_return_null_if_no_name_provided_for_setting()
+        {
+            ConfigurationFileLoader.LoadConfigurationFile(TestConfig.SingleValue);
+
+            Assert.IsNull(_target.AppSettings[""]);
+        }
     }
 }

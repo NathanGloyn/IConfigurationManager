@@ -1,4 +1,5 @@
-﻿using System.Collections.Specialized;
+﻿using System;
+using System.Collections.Specialized;
 using System.Configuration;
 using Configuration.Interface;
 
@@ -23,6 +24,11 @@ namespace Configuration.Core
         public ConnectionStringSettingsCollection ConnectionStrings
         {
             get { return System.Web.Configuration.WebConfigurationManager.ConnectionStrings; }
+        }
+
+        public T GetAppSettingsAs<T>(string key)
+        {
+            throw new NotImplementedException();
         }
 
         /// <summary>

@@ -1,4 +1,6 @@
-﻿using Configuration.Interface;
+﻿using System;
+using System.ComponentModel;
+using Configuration.Interface;
 using System.Collections.Specialized;
 using System.Configuration;
 
@@ -23,6 +25,24 @@ namespace Configuration.Core
         public ConnectionStringSettingsCollection ConnectionStrings
         {
             get { return ConfigurationManager.ConnectionStrings; }
+        }
+
+        public T GetAppSettingsAs<T>(string key)
+        {
+            if(string.IsNullOrEmpty(key))
+            {
+                
+            }
+
+            TypeConverter converter = TypeDescriptor.GetConverter(typeof(T));
+            try
+            {
+                return (T)converter.ConvertFromString(AppSettings[key]);
+            }
+            catch
+            {
+                return default(T);
+            }
         }
 
         /// <summary>

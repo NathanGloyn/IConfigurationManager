@@ -6,6 +6,7 @@
         SectionsNoValues,
         SingleValue,
         MultipleValues,
+        ValuesForAsAType,
         CustomSectionProviderDefinitionOnly,
         CustomSectionProviderSectionAttribute,
         CustomSectionProviderWithValues

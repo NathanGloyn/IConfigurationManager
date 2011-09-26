@@ -50,6 +50,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="When_using_IConfigurationManager_to_get_AppSetting_as_a_specified_type.cs" />
     <Compile Include="When_using_IConfigurationManager_to_read_app_settings.cs" />
     <Compile Include="Helper\SampleSectionProvider.cs" />
     <Compile Include="Helper\TestConfigEnum.cs" />
@@ -59,6 +60,10 @@
     <Compile Include="When_using_IConfigurationManager_to_get_custom_section.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Configs\ValuesForAsAType.config">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Include="Configs\CustomSectionProviderSectionAttribute.config">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
