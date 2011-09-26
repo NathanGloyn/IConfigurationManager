@@ -27,22 +27,15 @@ namespace Configuration.Core
             get { return ConfigurationManager.ConnectionStrings; }
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="key"></param>
+        /// <returns></returns>
         public T GetAppSettingsAs<T>(string key)
         {
-            if(string.IsNullOrEmpty(key))
-            {
-                
-            }
-
-            TypeConverter converter = TypeDescriptor.GetConverter(typeof(T));
-            try
-            {
-                return (T)converter.ConvertFromString(AppSettings[key]);
-            }
-            catch
-            {
-                return default(T);
-            }
+            return GetSetting.As<T>(AppSettings, key);
         }
 
         /// <summary>
