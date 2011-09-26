@@ -50,6 +50,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="GetSetting.cs" />
     <Compile Include="ConfigurationManagerAdapter.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="WebConfigurationManagerAdapter.cs" />

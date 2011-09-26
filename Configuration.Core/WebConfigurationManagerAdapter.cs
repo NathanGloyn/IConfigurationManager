@@ -28,7 +28,7 @@ namespace Configuration.Core
 
         public T GetAppSettingsAs<T>(string key)
         {
-            throw new NotImplementedException();
+            return GetSetting.As<T>(System.Web.Configuration.WebConfigurationManager.AppSettings, key);
         }
 
         /// <summary>
