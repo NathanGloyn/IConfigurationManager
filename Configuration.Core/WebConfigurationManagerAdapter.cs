@@ -21,6 +21,11 @@ namespace Configuration.Core
             }
         }
 
+        public T GetDefaultOrAppSettingAs<T>(string key)
+        {
+            return GetSetting.DefaultOrAs<T>(System.Web.Configuration.WebConfigurationManager.AppSettings, key);
+        }
+
         public ConnectionStringSettingsCollection ConnectionStrings
         {
             get { return System.Web.Configuration.WebConfigurationManager.ConnectionStrings; }

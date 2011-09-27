@@ -50,6 +50,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="When_getting_AppSetting_as_datetime.cs" />
+    <Compile Include="When_getting_setting_using_DefaultOrSettingAs.cs" />
     <Compile Include="When_using_IConfigurationManager_to_get_AppSetting_as_a_specified_type.cs" />
     <Compile Include="When_using_IConfigurationManager_to_read_app_settings.cs" />
     <Compile Include="Helper\SampleSectionProvider.cs" />

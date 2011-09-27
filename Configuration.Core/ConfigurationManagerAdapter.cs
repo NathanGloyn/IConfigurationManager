@@ -38,6 +38,11 @@ namespace Configuration.Core
             return GetSetting.As<T>(AppSettings, key);
         }
 
+        public T GetDefaultOrAppSettingAs<T>(string key)
+        {
+            return GetSetting.DefaultOrAs<T>(AppSettings, key);
+        }
+
         /// <summary>
         /// Provides access to any specific section within the configuration file
         /// </summary>

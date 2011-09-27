@@ -44,12 +44,6 @@ namespace ConfigurationManagerWrapper.Test
             Assert.AreEqual(2147483647, _target.GetAppSettingsAs<int>("int value"));
         }
 
-        [Test]
-        public void Should_return_default_value_when_setting_missing()
-        {
-            Assert.AreEqual(default(int),_target.GetAppSettingsAs<int>("missing"));
-        }
-
 
         [Test]
         public void Should_return_a_float_setting_as_a_Single()
@@ -70,40 +64,23 @@ namespace ConfigurationManagerWrapper.Test
         }
 
         [Test]
-        public void Should_return_a_datetime_for_short_datetime_in_UK_format()
+        public void Should_throw_ArgumentException_when_setting_missing()
         {
-            Assert.AreEqual(new DateTime(2011, 10, 13), _target.GetAppSettingsAs<DateTime>("short UK date value"));
+            Assert.Throws<ArgumentException>(()=> _target.GetAppSettingsAs<int>("missing"));
         }
 
         [Test]
-        public void Should_return_a_datetime_for_short_datetime_in_big_endian_format()
+        public void Should_throw_exception_if_attempts_to_cast_to_smaller_type()
         {
-            Assert.AreEqual(new DateTime(2011, 10, 13), _target.GetAppSettingsAs<DateTime>("short big endian date value"));
+            Assert.Throws<Exception>(()=> _target.GetAppSettingsAs<int>("long value"));
         }
 
         [Test]
-        [SetCulture("en-US")]
-        public void Should_return_a_datetime_for_short_datetime_in_US_format()
+        public void Should_throw_exception_if_trying_to_convert_to_incompatible_type()
         {
-            Assert.AreEqual(new DateTime(2011, 10, 13), _target.GetAppSettingsAs<DateTime>("short US date value"));
+            Assert.Throws<Exception>(() => _target.GetAppSettingsAs<byte>("bool value"));
         }
+
         
-        [Test]
-        public void Should_return_min_value_for_datetime_if_setting_is_US_date_in_non_US_culture()
-        {
-            Assert.AreEqual(DateTime.MinValue, _target.GetAppSettingsAs<DateTime>("short US date value"));
-        }
-
-        [Test]
-        public void Should_return_a_datetime_for_long_datetime_in_UK_format()
-        {
-            Assert.AreEqual(new DateTime(2011, 9, 13), _target.GetAppSettingsAs<DateTime>("long UK date value"));
-        }
-
-        [Test]
-        public void Should_return_a_datetime_for_long_datetime_in_US_format()
-        {
-            Assert.AreEqual(new DateTime(2011, 9, 13), _target.GetAppSettingsAs<DateTime>("long US date value"));
-        }
     }
 }
