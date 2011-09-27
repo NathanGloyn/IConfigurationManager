@@ -37,43 +37,17 @@ namespace ConfigurationManagerWrapper.Test
             Assert.AreEqual(123, _target.GetAppSettingsAs<int>("byte value"));
         }
 
-        [TestCase(typeof(byte), 123)]
-        [TestCase(typeof(sbyte),-99)]
-        [TestCase(typeof(int), 2147483647)]
-        [TestCase(typeof(uint), 4294967295)]
-        [TestCase(typeof(short), 32767)]
-        [TestCase(typeof(ushort), 65535)]
-        [TestCase(typeof(long), 922337203685477507)]
-        [TestCase(typeof(ulong), 18446744073709551615)]
-        [TestCase(typeof(float), 1.0)]
-        [TestCase(typeof(double),1.0)]
-        [TestCase(typeof(decimal),1.0)]
-        [TestCase(typeof(bool), true)]
-        [TestCase(typeof(char), 'A')]
-        public void Should_return_correct_value_for_setting_and_type(T typeToGet,  object expectedValue)
+        [Test]
+        public void Should_return_correct_value_for_int_setting()
         {
-            var settingName = string.Format("{0} value", typeToGet.GetType().Name);
 
-            Assert.AreEqual(expectedValue, _target.GetAppSettingsAs<T>(settingName));
+            Assert.AreEqual(2147483647, _target.GetAppSettingsAs<int>("int value"));
         }
 
-        [TestCase(typeof(byte))]
-        [TestCase(typeof(sbyte))]
-        [TestCase(typeof(int))]
-        [TestCase(typeof(uint))]
-        [TestCase(typeof(short))]
-        [TestCase(typeof(ushort))]
-        [TestCase(typeof(long))]
-        [TestCase(typeof(ulong))]
-        [TestCase(typeof(float))]
-        [TestCase(typeof(double))]
-        [TestCase(typeof(decimal))]
-        [TestCase(typeof(DateTime))]
-        [TestCase(typeof(bool))]
-        [TestCase(typeof(char))]
-        public void Should_return_default_value_when_setting_missing(T typetoGet)
+        [Test]
+        public void Should_return_default_value_when_setting_missing()
         {
-            Assert.AreEqual(default(T),_target.GetAppSettingsAs<T>("missing"));
+            Assert.AreEqual(default(int),_target.GetAppSettingsAs<int>("missing"));
         }
 
 
@@ -89,6 +63,11 @@ namespace ConfigurationManagerWrapper.Test
             Assert.AreEqual(1.0m, _target.GetAppSettingsAs<Decimal>("float value"));
         }
 
+        [Test]
+        public void Should_implicitly_cast_to_specified_type()
+        {
+            Assert.AreEqual(32767, _target.GetAppSettingsAs<int>("short value"));
+        }
 
         [Test]
         public void Should_return_a_datetime_for_short_datetime_in_UK_format()
