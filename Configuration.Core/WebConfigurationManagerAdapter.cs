@@ -8,7 +8,7 @@ namespace Configuration.Core
     /// <summary>
     /// Class that wraps the functionality within the Web Configuration Manager class
     /// </summary>
-    public class WebConfigurationManagerAdapter: IConfigurationManager
+    public class WebConfigurationManagerAdapter : IConfigurationManagerExtension
     {
         /// <summary>
         /// Provides access to the AppSettings in the configuration file

@@ -11,3 +11,7 @@ Although the standard Configuration classes in .Net are very powerful and useful
 The solution provides an interface for access AppSettings, ConnectionStrings and retrieving custom sections in a strongly typed way.
 
 Two adapters are provided for the standard ConfigurationManger and the WebConfigurationManager that implement the interface, this allows you inject the class making a dependency visible and allowing you to mock/stub the dependency for testing.
+
+## What is IConfigurationManagerExtension?
+
+This interface provides access to additional functionality around configuration settings that is not part of the normal ConfigurationManager functionality.

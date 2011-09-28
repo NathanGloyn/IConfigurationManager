@@ -9,7 +9,7 @@ namespace Configuration.Core
     /// <summary>
     /// Class that wraps the functionality within the standard Configuration Manager class
     /// </summary>
-    public class ConfigurationManagerAdapter : IConfigurationManager
+    public class ConfigurationManagerAdapter : IConfigurationManagerExtension
     {
         /// <summary>
         /// Provides access to the AppSettings in the configuration file

@@ -7,9 +7,9 @@ namespace ConfigurationManagerWrapper.Test
 {
     [TestFixture(typeof(ConfigurationManagerAdapter))]
     [TestFixture(typeof(WebConfigurationManagerAdapter))]
-    public class When_getting_setting_using_DefaultOrSettingAs<T> where T : IConfigurationManager, new()
+    public class When_getting_setting_using_DefaultOrSettingAs<T> where T : IConfigurationManagerExtension, new()
     {
-        private IConfigurationManager _target;
+        private IConfigurationManagerExtension _target;
 
         [SetUp]
         public void TestSetUp()
