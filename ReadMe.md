@@ -15,3 +15,8 @@ Two adapters are provided for the standard ConfigurationManger and the WebConfig
 ## What is IConfigurationManagerExtension?
 
 This interface provides access to additional functionality around configuration settings that is not part of the normal ConfigurationManager functionality.
+
+##Licencse
+
+This software is licensed under the MIT license which basically means you can do what you want
+with the software, read the license.txt for full details.
