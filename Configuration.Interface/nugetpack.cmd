@@ -1,0 +1,1 @@
+nuget pack Configuration.Interface.csproj -verbosity detailed -o pkg -symbols -properties configuration=Release-net40;releaseNotes="Added SymbolSource for targeting server for debug symbols"

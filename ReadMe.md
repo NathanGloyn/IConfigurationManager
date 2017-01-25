@@ -16,7 +16,18 @@ Two adapters are provided for the standard ConfigurationManger and the WebConfig
 
 This interface provides access to additional functionality around configuration settings that is not part of the normal ConfigurationManager functionality.
 
-##License
+## License
 
 This software is licensed under the MIT license which basically means you can do what you want
 with the software, read the license.txt for full details.
+
+## Helpful links
+
+-- Artical
+https://www.codeproject.com/articles/196563/don-t-use-configurationmanager
+
+-- Source
+https://github.com/NathanGloyn/IConfigurationManager
+
+-- How to config VS to use SymbolSource for debugging.
+http://www.symbolsource.org/Public/Home/VisualStudio
