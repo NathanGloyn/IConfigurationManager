@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<package>
+  <metadata>
+    <id>$id$</id>
+    <version>$version$</version>
+    <title>$title$</title>
+    <authors>$author$</authors>
+    <owners>Nathan.g</owners>
+    <licenseUrl>https://github.com/NathanGloyn/IConfigurationManager/blob/master/License.txt</licenseUrl>
+    <projectUrl>https://github.com/NathanGloyn/IConfigurationManager</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>$description$</description>
+    <releaseNotes>$releaseNotes$</releaseNotes>
+    <copyright>$copyright$</copyright>
+    <tags>ConfigurationManager IConfigurationManager Configuration.Interface configuration extension adaptor wrapper interface</tags>
+	<dependencies>
+		<dependency id="Configuration.Interface" version="1.1" />
+	</dependencies>
+  </metadata>
+  <files>
+	<file src="..\readme.md" target="" />
+	<!-- 
+	Obtained in csproj file for configuration=release-net40 already
+	<file src="bin\release-net40\$id$.dll" target="lib\net40" />
+
+	Added because of -symbols flag.
+	<file src="bin\release-net40\$id$.pdb" target="lib\net40" />
+	<file src="**\*.cs" target="src" />
+	
+	Adding this makes package multitarget.
+	-->
+	<file src="bin\release-net461\$id$.dll" target="lib\net461" />
+	<file src="bin\release-net461\$id$.pdb" target="lib\net461" />
+  </files>
+</package>

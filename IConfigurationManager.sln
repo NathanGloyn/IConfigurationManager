@@ -1,6 +1,8 @@
 ﻿
-Microsoft Visual Studio Solution File, Format Version 11.00
-# Visual Studio 2010
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Configuration.Interface", "Configuration.Interface\Configuration.Interface.csproj", "{C84AE463-03F7-4D3C-A4C0-2A2519AEEFE8}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Configuration.Core", "Configuration.Core\Configuration.Core.csproj", "{8F2A8F9A-A8EC-44AA-B4CD-BCB22D5E9383}"
@@ -13,26 +15,63 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		ReadMe.md = ReadMe.md
 	EndProjectSection
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Build", "Build", "{DA959390-08A4-4D96-AFEE-DB8AEE334E8F}"
+	ProjectSection(SolutionItems) = preProject
+		Build\nugetpack.cmd = Build\nugetpack.cmd
+		Build\nugetpush.cmd = Build\nugetpush.cmd
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
+		Debug-net40|Any CPU = Debug-net40|Any CPU
+		Debug-net461|Any CPU = Debug-net461|Any CPU
 		Release|Any CPU = Release|Any CPU
+		Release-net40|Any CPU = Release-net40|Any CPU
+		Release-net461|Any CPU = Release-net461|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{C84AE463-03F7-4D3C-A4C0-2A2519AEEFE8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{C84AE463-03F7-4D3C-A4C0-2A2519AEEFE8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C84AE463-03F7-4D3C-A4C0-2A2519AEEFE8}.Debug-net40|Any CPU.ActiveCfg = Debug-net40|Any CPU
+		{C84AE463-03F7-4D3C-A4C0-2A2519AEEFE8}.Debug-net40|Any CPU.Build.0 = Debug-net40|Any CPU
+		{C84AE463-03F7-4D3C-A4C0-2A2519AEEFE8}.Debug-net461|Any CPU.ActiveCfg = Debug-net461|Any CPU
+		{C84AE463-03F7-4D3C-A4C0-2A2519AEEFE8}.Debug-net461|Any CPU.Build.0 = Debug-net461|Any CPU
 		{C84AE463-03F7-4D3C-A4C0-2A2519AEEFE8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C84AE463-03F7-4D3C-A4C0-2A2519AEEFE8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C84AE463-03F7-4D3C-A4C0-2A2519AEEFE8}.Release-net40|Any CPU.ActiveCfg = Release-net40|Any CPU
+		{C84AE463-03F7-4D3C-A4C0-2A2519AEEFE8}.Release-net40|Any CPU.Build.0 = Release-net40|Any CPU
+		{C84AE463-03F7-4D3C-A4C0-2A2519AEEFE8}.Release-net461|Any CPU.ActiveCfg = Release-net461|Any CPU
+		{C84AE463-03F7-4D3C-A4C0-2A2519AEEFE8}.Release-net461|Any CPU.Build.0 = Release-net461|Any CPU
 		{8F2A8F9A-A8EC-44AA-B4CD-BCB22D5E9383}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{8F2A8F9A-A8EC-44AA-B4CD-BCB22D5E9383}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8F2A8F9A-A8EC-44AA-B4CD-BCB22D5E9383}.Debug-net40|Any CPU.ActiveCfg = Debug-net40|Any CPU
+		{8F2A8F9A-A8EC-44AA-B4CD-BCB22D5E9383}.Debug-net40|Any CPU.Build.0 = Debug-net40|Any CPU
+		{8F2A8F9A-A8EC-44AA-B4CD-BCB22D5E9383}.Debug-net461|Any CPU.ActiveCfg = Debug-net461|Any CPU
+		{8F2A8F9A-A8EC-44AA-B4CD-BCB22D5E9383}.Debug-net461|Any CPU.Build.0 = Debug-net461|Any CPU
 		{8F2A8F9A-A8EC-44AA-B4CD-BCB22D5E9383}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8F2A8F9A-A8EC-44AA-B4CD-BCB22D5E9383}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8F2A8F9A-A8EC-44AA-B4CD-BCB22D5E9383}.Release-net40|Any CPU.ActiveCfg = Release-net40|Any CPU
+		{8F2A8F9A-A8EC-44AA-B4CD-BCB22D5E9383}.Release-net40|Any CPU.Build.0 = Release-net40|Any CPU
+		{8F2A8F9A-A8EC-44AA-B4CD-BCB22D5E9383}.Release-net461|Any CPU.ActiveCfg = Release-net461|Any CPU
+		{8F2A8F9A-A8EC-44AA-B4CD-BCB22D5E9383}.Release-net461|Any CPU.Build.0 = Release-net461|Any CPU
 		{DAF99B2D-108D-429D-9FF7-048B5AB4F26C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{DAF99B2D-108D-429D-9FF7-048B5AB4F26C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DAF99B2D-108D-429D-9FF7-048B5AB4F26C}.Debug-net40|Any CPU.ActiveCfg = Debug-net40|Any CPU
+		{DAF99B2D-108D-429D-9FF7-048B5AB4F26C}.Debug-net40|Any CPU.Build.0 = Debug-net40|Any CPU
+		{DAF99B2D-108D-429D-9FF7-048B5AB4F26C}.Debug-net461|Any CPU.ActiveCfg = Debug-net461|Any CPU
+		{DAF99B2D-108D-429D-9FF7-048B5AB4F26C}.Debug-net461|Any CPU.Build.0 = Debug-net461|Any CPU
 		{DAF99B2D-108D-429D-9FF7-048B5AB4F26C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DAF99B2D-108D-429D-9FF7-048B5AB4F26C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DAF99B2D-108D-429D-9FF7-048B5AB4F26C}.Release-net40|Any CPU.ActiveCfg = Release-net40|Any CPU
+		{DAF99B2D-108D-429D-9FF7-048B5AB4F26C}.Release-net40|Any CPU.Build.0 = Release-net40|Any CPU
+		{DAF99B2D-108D-429D-9FF7-048B5AB4F26C}.Release-net461|Any CPU.ActiveCfg = Release-net461|Any CPU
+		{DAF99B2D-108D-429D-9FF7-048B5AB4F26C}.Release-net461|Any CPU.Build.0 = Release-net461|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{DA959390-08A4-4D96-AFEE-DB8AEE334E8F} = {51C38EE7-4D75-4C8C-8A44-E59D0BDC44F5}
 	EndGlobalSection
 EndGlobal

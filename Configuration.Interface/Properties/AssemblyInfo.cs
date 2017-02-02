@@ -6,11 +6,11 @@ using System.Runtime.InteropServices;
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 [assembly: AssemblyTitle("Configuration.Interface")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyDescription("An interface for ConfigurationManager or WebConfigurationManager to help with unit testing and dependency injection.")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("Microsoft")]
+[assembly: AssemblyCompany("Nathan Gloyn")]
 [assembly: AssemblyProduct("Configuration.Interface")]
-[assembly: AssemblyCopyright("Copyright © Microsoft 2010")]
+[assembly: AssemblyCopyright("Copyright (c) 2011 Nathan Gloyn")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
@@ -22,15 +22,13 @@ using System.Runtime.InteropServices;
 // The following GUID is for the ID of the typelib if this project is exposed to COM
 [assembly: Guid("c5154018-e5e1-45ac-b4a6-476961e312a0")]
 
-// Version information for an assembly consists of the following four values:
-//
-//      Major Version
-//      Minor Version 
-//      Build Number
-//      Revision
-//
-// You can specify all the values or you can default the Build and Revision Numbers 
-// by using the '*' as shown below:
-// [assembly: AssemblyVersion("1.0.*")]
-[assembly: AssemblyVersion("1.0.0.0")]
+// Using MAJOR.MINOR.PATCH.BUILD
+// MAJOR version when you make incompatible API changes,
+// MINOR version when you add functionality in a backwards-compatible manner, and
+// PATCH version when you make backwards-compatible bug fixes.
+// BUILD .. the auto build number.
+// See http://www.xavierdecoster.com/semantic-versioning-auto-incremented-nuget-package-versions 
+// for why this is an anti-pattern but is what we are using none the less.
+
+[assembly: AssemblyVersion("1.1.2.*")]
 [assembly: AssemblyFileVersion("1.0.0.0")]
